@@ -1,0 +1,13 @@
+// to declare variables we use $variable_name
+
+$primary: red;
+$secondary: green;
+
+p {
+  color: $primary;
+}
+
+button {
+  background-color: $secondary;
+  color: $primary;
+}
