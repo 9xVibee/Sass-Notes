@@ -3,10 +3,19 @@
     color: $val;
   }
 
-  @for $i from 1 through 9 {
-    .text-#{$key}-light-#{$i} {
-      color: mix(white, $val, $i * 10);
+  .text-#{$key}-hover {
+    &:hover {
+      color: red;
+    }
+  }
+
+  @debug $val;
+
+  @if ($val != black and $val != white) {
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: mix(white, $val, $i * 10);
+      }
     }
   }
 }
-

@@ -7,6 +7,9 @@ const Card = () => {
         velit deleniti. Corporis, voluptate in. Iure praesentium at sapiente
         eaque? <a>click me!!</a>
       </p>
+      {/* <button className="text-primary-hover">Hover me</button> */}
+      {/* <button className="btn-outlined-primary">Hover me</button> */}
+      <button className="btn-complement-primary">Hover me</button>
     </div>
   );
 };

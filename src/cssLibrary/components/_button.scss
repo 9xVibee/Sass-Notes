@@ -1,0 +1,33 @@
+//! mixin -> allow you to define style that is being re-used
+
+@mixin btn($bg-val: #fff) {
+  background-color: $bg-val;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  border-radius: 8px;
+  padding: $base-padding $base-padding * 2;
+}
+
+@each $key, $val in $colors {
+  .btn-#{$key} {
+    @include btn($val);
+  }
+
+  .btn-outlined-#{$key} {
+    @include btn();
+
+    border: $base-border-thickness solid $val;
+  }
+
+  .btn-complement-#{$key} {
+    color: light-comp($val);
+    @include btn($val);
+    transition: all 0.3s;
+    &:hover {
+      background-color: light-comp($val);
+      color: red;
+    }
+  }
+}
